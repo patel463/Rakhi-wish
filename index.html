@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="रक्षाबंधन की हार्दिक शुभकामनाएं - [आपका नाम] की ओर से। अपनी शायरी और संदेश शेयर करें।">
+<title>रक्षाबंधन की शुभकामनाएं | [आपका नाम]</title>
+<style>
+    body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fffaf0; margin: 0; text-align: center; }
+    header { background: url('rakhi-bg.jpg') no-repeat center/cover; color: white; padding: 20px; }
+    img { border-radius: 50%; width: 120px; height: 120px; border: 5px solid white; }
+    .message-box { background: #fff8dc; padding: 20px; margin: 20px auto; width: 90%; max-width: 600px; border-radius: 10px; }
+    textarea { width: 100%; padding: 10px; font-size: 18px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #ff4500; color: white; border: none; padding: 10px 20px; margin-top: 10px; cursor: pointer; border-radius: 5px; font-size: 16px; }
+    .share { margin: 20px 0; }
+    .ad-slot { background: #eee; padding: 10px; margin: 20px auto; width: 90%; max-width: 728px; border: 1px dashed #aaa; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>रक्षाबंधन की हार्दिक शुभकामनाएं</h1>
+    <img src="your-photo.jpg" alt="आपकी फोटो">
+    <h2>From: [आपका नाम]</h2>
+</header>
+
+<div class="ad-slot">यहां आपका विज्ञापन आ सकता है (728x90)</div>
+
+<div class="message-box">
+    <h3>अपना शुभकामना संदेश लिखें:</h3>
+    <textarea id="wish" rows="4">भाई-बहन का प्यार है अनमोल, रक्षाबंधन का त्यौहार है बेमिसाल।</textarea>
+    <button onclick="shareWish()">शेयर करें</button>
+</div>
+
+<div class="share">
+    <button onclick="shareOnWhatsApp()">📱 WhatsApp पर शेयर करें</button>
+    <button onclick="shareOnFacebook()">📘 Facebook पर शेयर करें</button>
+</div>
+
+<div class="ad-slot">यहां आपका विज्ञापन आ सकता है (300x250)</div>
+
+<script>
+function shareWish() {
+    alert("आपका संदेश सेव हो गया! अब शेयर बटन से भेजें।");
+}
+function shareOnWhatsApp() {
+    let message = document.getElementById('wish').value;
+    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
+}
+function shareOnFacebook() {
+    let message = document.getElementById('wish').value;
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=&quote=${encodeURIComponent(message)}`, '_blank');
+}
+</script>
+
+</body>
+</html>
