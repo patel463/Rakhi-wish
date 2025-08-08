@@ -1,57 +1,114 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="रक्षाबंधन की हार्दिक शुभकामनाएं - [आपका नाम] की ओर से। अपनी शायरी और संदेश शेयर करें।">
-<title>रक्षाबंधन की शुभकामनाएं | [आपका नाम]</title>
-<style>
-    body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fffaf0; margin: 0; text-align: center; }
-    header { background: url('rakhi-bg.jpg') no-repeat center/cover; color: white; padding: 20px; }
-    img { border-radius: 50%; width: 120px; height: 120px; border: 5px solid white; }
-    .message-box { background: #fff8dc; padding: 20px; margin: 20px auto; width: 90%; max-width: 600px; border-radius: 10px; }
-    textarea { width: 100%; padding: 10px; font-size: 18px; border-radius: 5px; border: 1px solid #ccc; }
-    button { background: #ff4500; color: white; border: none; padding: 10px 20px; margin-top: 10px; cursor: pointer; border-radius: 5px; font-size: 16px; }
-    .share { margin: 20px 0; }
-    .ad-slot { background: #eee; padding: 10px; margin: 20px auto; width: 90%; max-width: 728px; border: 1px dashed #aaa; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>रक्षाबंधन की शुभकामनाएं - [आपका नाम]</title>
+    <meta name="description" content="रक्षाबंधन की सुंदर शुभकामनाएं, राखी शायरी और पर्सनल मैसेज भेजें।">
+    <meta name="keywords" content="रक्षाबंधन, राखी, शुभकामनाएं, Raksha Bandhan, Rakhi Wishes">
+    <meta property="og:title" content="रक्षाबंधन की शुभकामनाएं 🎉">
+    <meta property="og:description" content="भाई-बहन के प्यार का त्योहार — अपना संदेश भेजें!">
+    <meta property="og:image" content="images/your-photo.jpg">
+    <meta property="og:type" content="website">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            text-align: center;
+            background: linear-gradient(#fff3e0, #ffe0b2);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        img {
+            border-radius: 50%;
+            border: 5px solid #ff9800;
+            margin-top: 20px;
+            width: 200px;
+        }
+        .message {
+            font-size: 1.2rem;
+            color: #4e342e;
+            margin: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            font-size: 1rem;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        .share-buttons {
+            margin-top: 20px;
+        }
+        .share-buttons a {
+            text-decoration: none;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
+    <header>रक्षाबंधन की हार्दिक शुभकामनाएं 🎉</header>
 
-<header>
-    <h1>रक्षाबंधन की हार्दिक शुभकामनाएं</h1>
-    <img src="your-photo.jpg" alt="आपकी फोटो">
-    <h2>From: [आपका नाम]</h2>
-</header>
+    <img src="images/your-photo.jpg" alt="आपकी फोटो">
 
-<div class="ad-slot">यहां आपका विज्ञापन आ सकता है (728x90)</div>
+    <div class="message">
+        प्रिय बहन/भाई, यह रक्षाबंधन आपके जीवन में खुशियां और समृद्धि लेकर आए।
+    </div>
 
-<div class="message-box">
-    <h3>अपना शुभकामना संदेश लिखें:</h3>
-    <textarea id="wish" rows="4">भाई-बहन का प्यार है अनमोल, रक्षाबंधन का त्यौहार है बेमिसाल।</textarea>
-    <button onclick="shareWish()">शेयर करें</button>
-</div>
+    <h3>अपना संदेश लिखें:</h3>
+    <textarea id="customMessage" placeholder="अपना पर्सनल शुभकामना संदेश लिखें..."></textarea>
+    <br>
+    <button onclick="updateMessage()">संदेश सेव करें</button>
 
-<div class="share">
-    <button onclick="shareOnWhatsApp()">📱 WhatsApp पर शेयर करें</button>
-    <button onclick="shareOnFacebook()">📘 Facebook पर शेयर करें</button>
-</div>
+    <div class="share-buttons">
+        <a id="whatsappShare" href="#" target="_blank">📱 WhatsApp पर शेयर करें</a>
+        <a id="facebookShare" href="#" target="_blank">📘 Facebook पर शेयर करें</a>
+    </div>
 
-<div class="ad-slot">यहां आपका विज्ञापन आ सकता है (300x250)</div>
+    <footer>
+        Designed with ❤️ for Raksha Bandhan | © 2025 [आपका नाम]
+    </footer>
 
-<script>
-function shareWish() {
-    alert("आपका संदेश सेव हो गया! अब शेयर बटन से भेजें।");
-}
-function shareOnWhatsApp() {
-    let message = document.getElementById('wish').value;
-    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
-}
-function shareOnFacebook() {
-    let message = document.getElementById('wish').value;
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=&quote=${encodeURIComponent(message)}`, '_blank');
-}
-</script>
-
+    <script>
+        function updateMessage() {
+            const msg = document.getElementById("customMessage").value;
+            if (msg.trim() !== "") {
+                document.querySelector(".message").innerText = msg;
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent(msg);
+                document.getElementById("whatsappShare").href = `https://wa.me/?text=${text} ${url}`;
+                document.getElementById("facebookShare").href = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`;
+                alert("संदेश अपडेट और शेयर लिंक तैयार हो गया!");
+            } else {
+                alert("कृपया पहले संदेश लिखें।");
+            }
+        }
+    </script>
 </body>
 </html>
